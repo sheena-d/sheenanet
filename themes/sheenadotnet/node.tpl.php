@@ -13,6 +13,9 @@
   <?php else: ?>
   <?php print(l(t('view details'), 'node/'.$node->nid)); ?>
   <?php endif; ?>
+  <?php if($is_admin): ?>
+  <?php print(l(t('edit'), 'node/'.$node->nid.'/edit')); ?>
+  <?php endif; ?>
   </footer>
   <header>
   <?php print(preg_replace('/_/', ' ', $node->type));?>

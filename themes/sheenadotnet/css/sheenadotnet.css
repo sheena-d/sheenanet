@@ -310,10 +310,10 @@ article.node-teaser.node-tweet .content {
 	color: #54585a;
 }
 
-article#node-1574.node-teaser header {
+article.node-sticky.node-teaser header {
 	display: none;
 }
-article#node-1574.node-teaser .content{
+article.node-sticky.node-teaser .content{
 	background-color: #4f4371;
 }
 

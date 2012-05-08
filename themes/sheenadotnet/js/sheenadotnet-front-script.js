@@ -2,7 +2,7 @@
 Drupal.behaviors.sheenaMasonry = {
   attach: function (context, settings) {
         var $container;
-        var $pgCount = 0;
+        var $pgCount = 1;
         var $pgNum = $('ul.pager li.pager-item').size();
         
         $('article.node-teaser .inner').hover(
@@ -42,7 +42,6 @@ Drupal.behaviors.sheenaMasonry = {
         function(newElements){
           var $newElems = $( newElements );
           $pgCount ++;
-          
           if($pgCount == $pgNum) {
             $(window).unbind('.infscr');
             $('#main').append('<div class="scrollEmpty">Nothing more to see here</div>');
