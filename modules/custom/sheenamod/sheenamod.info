@@ -1,0 +1,5 @@
+name = Sheena's Module
+description = A little bit of custom spice.
+core = 7.x
+
+dependencies[] = feeds

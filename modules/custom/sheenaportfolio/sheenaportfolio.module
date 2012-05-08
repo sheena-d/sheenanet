@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Sheena's Content Types feature.
+ */
+
+include_once('sheenaportfolio.features.inc');

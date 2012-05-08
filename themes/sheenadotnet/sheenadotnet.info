@@ -1,0 +1,15 @@
+
+name = Sheena Dot Net
+core = 7.x
+engine = phptemplate
+
+stylesheets[all][] = css/sheenadotnet.css
+
+features[] = favicon
+features[] = main_menu
+features[] = name
+features[] = slogan
+
+scripts[] = js/jquery.fittext.js
+scripts[] = js/bigtext.js
+scripts[] = js/sheenadotnet-script.js

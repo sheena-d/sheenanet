@@ -1,0 +1,79 @@
+<?php 
+
+/**
+ * Implements hook_feeds_parser_sources_alter()
+ *
+ * Creates a parser source that will determind whether an item from 
+ * Drupal Answers is an answer to be published, or other content type
+ * to not be published.
+ *
+ */
+function sheenamod_feeds_parser_sources_alter(&$sources, $content_type) {
+  $sources['sheenamod_check_answer'] = array(
+    'name' => t('Is Answer'),
+    'description' => t('Checks that an item from Drupal Answers is an answer'),
+    'callback' => 'sheenamod_check_answer_get_source',
+  );
+  $sources['sheenamod_check_tweet'] = array(
+    'name' => t('Is Retweet'),
+    'description' => t('Checks that an item from Twitter is not a retweet'),
+    'callback' => 'sheenamod_check_tweet_get_source',
+  );
+  $sources['sheenamod_clean_answer'] = array(
+    'name' => t('Clean answer'),
+    'description' => t('strips out redundant strings from content for drupal answers feeds'),
+    'callback' => 'sheenamod_clean_answer_get_source',
+  );  
+  $sources['sheenamod_clean_tweet'] = array(
+    'name' => t('Clean tweet'),
+    'description' => t('strips out redundant strings from content for Twitter feeds'),
+    'callback' => 'sheenamod_clean_tweet_get_source',
+  );
+  
+}
+
+/**
+ * Callback for hook_feeds_parser_sources_alter().
+ *
+ * Determines whether a feed item  from Drupal Answers is an answer and
+ * publishes nodes that are answers (rather than comments, etc.)
+ *
+ * @return
+ *   1 to publish the node if it is an answer, 0 otherwise to unpublish it.
+ *
+ */
+function sheenamod_check_answer_get_source($source, FeedsParserResult $result, $key) {
+  $publish = 0;
+  $item = $result->currentItem();
+  if(strpos($item['title'], 'Answer by sheena_d ')!==FALSE) {
+    $publish = 1;
+  }
+ 
+  return $publish;
+}
+
+function sheenamod_check_tweet_get_source($source, FeedsParserResult $result, $key) {
+  $publish = 0;
+  $item = $result->currentItem();
+  if(strpos($item['title'], 'Catchatorie: RT @')=== FALSE) {
+    $publish = 1;
+  }
+ 
+  return $publish;
+}
+
+function sheenamod_clean_answer_get_source($source, FeedsParserResult $result, $key) {
+  
+  $item = $result->currentItem();
+  $title = str_replace('Answer by sheena_d for', '', $item['title']);
+  
+  return $title;
+}
+
+function sheenamod_clean_tweet_get_source($source, FeedsParserResult $result, $key) {
+  
+  $item = $result->currentItem();
+  $title = str_replace('Catchatorie: ', '', $item['title']);
+  
+  return $title;
+}

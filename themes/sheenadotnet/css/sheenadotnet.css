@@ -1,0 +1,261 @@
+/* @override 
+	http://localhost:9009/sites/all/themes/sheenadotnet/css/sheenadotnet.css?m3o8lo
+	http://localhost:9009/sites/all/themes/sheenadotnet/css/sheenadotnet.css?m3o9e9
+	http://localhost:9009/sites/all/themes/sheenadotnet/css/sheenadotnet.css?m3odn5
+	http://localhost:9009/sites/all/themes/sheenadotnet/css/sheenadotnet.css?m3ofmi */
+
+/**
+ * Layout
+ */
+#main article.node-teaser {
+	width: 33%;
+}
+
+#site-name {
+	width: 66%;
+}
+
+/* Desktop display. */
+@media only screen and (min-width:1200px) {
+  #main {
+  	width: 1020px;
+  	margin: 0 auto;
+  }
+}
+
+/* iPad: landscape. */
+@media only screen and (max-device-width: 1024px) and (orientation:landscape), only screen and (min-width:960px) and (max-width:1020px) and (min-device-width: 1100px) {
+  #main {
+  	min-width: 960px;
+  	max-width: 1020px;
+  	margin: 0 auto;
+  }
+}
+
+/* iPad: portrait. */
+@media only screen and (max-device-width: 1024px) and (orientation:portrait), only screen and (min-width:768px) and (max-width:959px) and (min-device-width: 1100px) {
+    #main {
+    	min-width: 720px;
+    	max-width: 936px;
+    }
+
+    #main article.node-teaser {
+    	width: 50%;
+    }
+}
+
+/* Mobile display. */
+@media only screen and (max-width:759px) {
+  #main {
+  	width: 720px;
+  }
+  #site-name,
+  #main article.node-teaser {
+  	width: 100%;
+  }
+}
+
+/*background */
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+body {
+	height: 100%;
+	background: transparent url(../images/background.jpg) repeat 0 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*homepage items*/
+
+#site-header {
+   width: 100%;
+   padding: 0;
+   margin: 0 0 30px 0;
+}
+
+#main article.node-teaser {
+  float: left;
+  overflow: hidden;
+}
+
+article.node-teaser .inner {
+  background-color: #b8bbbd;
+  margin: 0 15px 30px;
+  box-shadow: 1px 3px 1px rgba(0,0,0,.3);
+}
+
+/**
+ * Typography
+ */
+ 
+@font-face {
+    font-family: 'Pacifico';
+    src: url('../fonts/pacifico/pacifico-webfont.eot') format('eot');
+    src: url('../fonts/pacifico/pacifico-webfont.woff') format('woff'),
+         url('../fonts/pacifico/pacifico-webfont.ttf') format('truetype'),
+         url('../fonts/pacifico/pacifico-webfont.svg#PacificoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bebas';
+    src: url('../bebas/bebas-webfont.eot') format('eot');
+    src: url('../bebas/bebas-webfont.woff') format('woff'),
+         url('../bebas/bebas-webfont.ttf') format('truetype'),
+         url('../bebas/bebas-webfont.svg#BebasRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p {
+	margin: 10px 0;
+	font-size: inherit;
+	line-height: 1.4em;
+}
+
+p:first-child{
+	margin-top: 0;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+
+#site-name {
+  color: #d0d4d6;
+	font-family: 'Pacifico', script;
+	font-weight: normal;
+	text-align: center;
+	margin: 0 auto 60px auto;
+	font-size: 28px;
+	text-shadow: 1px 1px 0px rgba(0,0,0,.2);
+	letter-spacing: 0.08em;
+}
+
+#site-name .name {
+background: transparent url(../images/header.jpg) no-repeat center bottom;
+background-size: cover;
+-moz-background-size: cover;
+-webkit-background-size: cover;
+  color: #fff;
+  display: block;
+  font-family: 'Bebas', 'LeagueGothic', sans-serif;
+  font-size: 116px;
+  line-height: 1em;
+  letter-spacing: normal;
+  margin: 0 0 5px;
+  padding: 40px 0 30px 0;
+  text-transform: uppercase;
+  width: 100%;
+  text-shadow: 2px 3px 0px rgba(0,0,0,.3);
+}
+
+#site-name a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/*articles*/
+article.node-teaser .overlay {
+	position: absolute;
+	display: none;
+}
+
+article.node-teaser header {
+	font-family: "Pacifico", script;
+	font-size: 18px;
+	text-align: right;
+	margin: 0px 15px;
+	color: #fff;
+	text-shadow: 1px 1px 0px rgba(0,0,0,.2);
+	letter-spacing: 0.08em;
+}
+
+article.node-teaser .content {
+	padding: 8px 8px 10px;
+	font-family: "Bebas", "LeagueGothic", sans-serif;
+	color: #fff;
+	font-size: 42px;
+	line-height: 1.3em;
+	text-shadow: 2px 3px 0px rgba(0,0,0,.3);
+	text-transform: uppercase;
+}
+
+article.node-teaser .content strong {
+	font-weight: normal;
+	color: #4f4371;
+}
+
+article.node-teaser .content em {
+	font-style: normal;
+	font-family: "Pacifico", script;
+	text-transform: none;
+	text-shadow: none;
+	color: #fff;
+}
+
+article.node-teaser.node-article .content {
+	font-size: 60px;
+}
+
+article.node-teaser.node-link .content { 
+	font-family: Georgia, serif;
+	font-size: 14px;
+	color: #333;
+	text-shadow: none;
+	background: #fff;
+	margin: 0 8px 8px;
+	padding: 8px;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	text-transform: none;
+}
+
+article.node-teaser.node-link footer {
+	display: block;
+	position: relative;
+	font-family: "Bebas", "LeagueGothic", sans-serif;
+	text-transform: uppercase;
+}
+
+article.node-teaser.node-link footer a {
+  display: block;
+	text-overflow: ellipsis;
+	font-size: 18px;
+	line-height: 24px;
+	width: 100%;
+	overflow: hidden;
+	height: 24px;
+	margin: 0 8px 8px;
+	color: #0d5b82;
+}
+
+article.node-teaser.node-portfolio .content{
+	padding: 0;
+}
+
+article.node-teaser.node-portfolio .content img {
+	display: block;
+	max-width: 100%;
+}
+
+article.node-teaser.node-tweet .content {
+	font-family: "Pacifico", script;
+	text-transform: none;
+	font-size: 28px;
+	letter-spacing: 0.08em;
+	text-shadow: none;
+	color: #54585a;
+}
+
+article#node-1574.node-teaser header {
+	display: none;
+}
+article#node-1574.node-teaser .content{
+	background-color: #4f4371;
+}
