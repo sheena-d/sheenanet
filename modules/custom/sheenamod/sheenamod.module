@@ -55,7 +55,7 @@ function sheenamod_check_answer_get_source($source, FeedsParserResult $result, $
 function sheenamod_check_tweet_get_source($source, FeedsParserResult $result, $key) {
   $publish = 0;
   $item = $result->currentItem();
-  if(strpos($item['title'], 'Catchatorie: RT @')=== FALSE) {
+  if(strpos($item['title'], 'Catchatorie: RT @')=== FALSE && strpos($item['title'], 'Catchatorie: @')!== 0) {
     $publish = 1;
   }
  
