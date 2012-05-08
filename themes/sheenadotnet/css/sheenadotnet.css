@@ -2,56 +2,55 @@
 	http://localhost:9009/sites/all/themes/sheenadotnet/css/sheenadotnet.css?m3o8lo
 	http://localhost:9009/sites/all/themes/sheenadotnet/css/sheenadotnet.css?m3o9e9
 	http://localhost:9009/sites/all/themes/sheenadotnet/css/sheenadotnet.css?m3odn5
-	http://localhost:9009/sites/all/themes/sheenadotnet/css/sheenadotnet.css?m3ofmi */
+	http://localhost:9009/sites/all/themes/sheenadotnet/css/sheenadotnet.css?m3ofmi
+	http://localhost:9009/sites/all/themes/sheenadotnet/css/sheenadotnet.css?m3pod2
+	http://localhost:9009/sites/all/themes/sheenadotnet/css/sheenadotnet.css?m3ptn4
+	http://localhost:9009/sites/all/themes/sheenadotnet/css/sheenadotnet.css?m3pzip */
 
 /**
  * Layout
  */
-#main article.node-teaser {
-	width: 33%;
-}
 
 #site-name {
-	width: 66%;
+	width: 85%;
+}
+
+.front #main {
+	position: fixed;
+	padding-bottom: 200px;
+}
+
+.not-front #main {
+	position: relative;
+	padding-bottom: 200px;
+}
+
+#main article.node-teaser {
+	width: 340px;
 }
 
 /* Desktop display. */
-@media only screen and (min-width:1200px) {
+@media only screen and (min-width:960px) {
   #main {
-  	width: 1020px;
+    width: 1020px;
   	margin: 0 auto;
   }
-}
 
-/* iPad: landscape. */
-@media only screen and (max-device-width: 1024px) and (orientation:landscape), only screen and (min-width:960px) and (max-width:1020px) and (min-device-width: 1100px) {
-  #main {
-  	min-width: 960px;
-  	max-width: 1020px;
-  	margin: 0 auto;
-  }
 }
 
 /* iPad: portrait. */
-@media only screen and (max-device-width: 1024px) and (orientation:portrait), only screen and (min-width:768px) and (max-width:959px) and (min-device-width: 1100px) {
+@media only screen and (max-width: 959px) and (min-width: 768px) {
     #main {
-    	min-width: 720px;
-    	max-width: 936px;
-    }
-
-    #main article.node-teaser {
-    	width: 50%;
+        width: 680px;
+    	margin: 0 auto;
     }
 }
 
 /* Mobile display. */
-@media only screen and (max-width:759px) {
+@media only screen and (max-width:767px) {
   #main {
-  	width: 720px;
-  }
-  #site-name,
-  #main article.node-teaser {
-  	width: 100%;
+    width: 360px;
+    margin: 0 auto;
   }
 }
 
@@ -79,36 +78,19 @@ body {
 #main article.node-teaser {
   float: left;
   overflow: hidden;
+  position: relative;
 }
 
 article.node-teaser .inner {
   background-color: #b8bbbd;
   margin: 0 15px 30px;
   box-shadow: 1px 3px 1px rgba(0,0,0,.3);
+  position: relative;
 }
 
 /**
  * Typography
  */
- 
-@font-face {
-    font-family: 'Pacifico';
-    src: url('../fonts/pacifico/pacifico-webfont.eot') format('eot');
-    src: url('../fonts/pacifico/pacifico-webfont.woff') format('woff'),
-         url('../fonts/pacifico/pacifico-webfont.ttf') format('truetype'),
-         url('../fonts/pacifico/pacifico-webfont.svg#PacificoRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Bebas';
-    src: url('../bebas/bebas-webfont.eot') format('eot');
-    src: url('../bebas/bebas-webfont.woff') format('woff'),
-         url('../bebas/bebas-webfont.ttf') format('truetype'),
-         url('../bebas/bebas-webfont.svg#BebasRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
 
 p {
 	margin: 10px 0;
@@ -127,13 +109,12 @@ p:last-child {
 
 #site-name {
   color: #d0d4d6;
-	font-family: 'Pacifico', script;
+	font-family: 'bello-pro', script;
 	font-weight: normal;
 	text-align: center;
 	margin: 0 auto 60px auto;
 	font-size: 28px;
 	text-shadow: 1px 1px 0px rgba(0,0,0,.2);
-	letter-spacing: 0.08em;
 }
 
 #site-name .name {
@@ -143,12 +124,12 @@ background-size: cover;
 -webkit-background-size: cover;
   color: #fff;
   display: block;
-  font-family: 'Bebas', 'LeagueGothic', sans-serif;
+  font-family: 'bebas-neue', 'LeagueGothic', sans-serif;
   font-size: 116px;
   line-height: 1em;
   letter-spacing: normal;
-  margin: 0 0 5px;
-  padding: 40px 0 30px 0;
+  margin: 0 0 15px;
+  padding: 40px 0 10px 0;
   text-transform: uppercase;
   width: 100%;
   text-shadow: 2px 3px 0px rgba(0,0,0,.3);
@@ -161,23 +142,100 @@ background-size: cover;
 
 /*articles*/
 article.node-teaser .overlay {
-	position: absolute;
 	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.6);
+	text-align: center;
 }
 
+article.node-teaser .overlay:hover {
+	cursor: pointer;
+}
+
+article.node-teaser .overlay a {
+	display: inline-block;
+	background-color: #b8bbbd;
+	background-image: linear-gradient(
+	  top, 
+	  #e2e3e4 0%, 
+	  #8b8f92 100%
+	  ); /* w3c */
+	background-image: -o-linear-gradient(
+	  top, 
+	  #e2e3e4 0%, 
+	  #8b8f92 100%
+	  ); /* opera */
+	background-image: -webkit-linear-gradient(
+	  top, 
+	  #e2e3e4 0%, 
+	  #8b8f92 100%
+	  );  /* webkit */
+	background-image: -moz-linear-gradient(
+	  top, 
+	  #e2e3e4 0%, 
+	  #8b8f92 100%
+	  ); /* firefox */
+	border-radius: 14px;
+	border: 1px solid #b8bbbd;
+	color: #fff;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+	line-height: 1em;
+	padding: 8px 12px;
+	margin: 36px 12px;
+  text-shadow: 0px 1px 0px rgba(0,0,0,.6);
+  }
+  
+.ie article.node-teaser .overlay a {
+    background: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr=#e2e3e4, 
+      endColorstr=#8b8f92,
+      GradientType=0
+        );
+    position: relative; /* Required to enable cleartype in IE when using filter */ 
+    zoom: 1;
+      }
+      
+      /* IE8 */
+.ie8 article.node-teaser .overlay a {
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr=#e2e3e4, 
+      endColorstr=#8b8f92,
+      GradientType=0
+      );
+  }
+  
+  article.node-teaser .overlay a:hover {
+  	background-image: none;
+  }
+  
+.ie article.node-teaser .overlay a:hover{
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  	}
+  	
+
+
+.ie8 article.node-teaser .overlay a:hover {
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  }
+
 article.node-teaser header {
-	font-family: "Pacifico", script;
+	font-family: "bello-pro", script;
 	font-size: 18px;
 	text-align: right;
 	margin: 0px 15px;
 	color: #fff;
 	text-shadow: 1px 1px 0px rgba(0,0,0,.2);
-	letter-spacing: 0.08em;
 }
 
 article.node-teaser .content {
 	padding: 8px 8px 10px;
-	font-family: "Bebas", "LeagueGothic", sans-serif;
+	font-family: "bebas-neue", "LeagueGothic", sans-serif;
 	color: #fff;
 	font-size: 42px;
 	line-height: 1.3em;
@@ -192,7 +250,7 @@ article.node-teaser .content strong {
 
 article.node-teaser .content em {
 	font-style: normal;
-	font-family: "Pacifico", script;
+	font-family: "bello-pro", script;
 	text-transform: none;
 	text-shadow: none;
 	color: #fff;
@@ -219,7 +277,7 @@ article.node-teaser.node-link .content {
 article.node-teaser.node-link footer {
 	display: block;
 	position: relative;
-	font-family: "Bebas", "LeagueGothic", sans-serif;
+	font-family: "bebas-neue", "LeagueGothic", sans-serif;
 	text-transform: uppercase;
 }
 
@@ -245,10 +303,9 @@ article.node-teaser.node-portfolio .content img {
 }
 
 article.node-teaser.node-tweet .content {
-	font-family: "Pacifico", script;
+	font-family: "bello-pro", script;
 	text-transform: none;
 	font-size: 28px;
-	letter-spacing: 0.08em;
 	text-shadow: none;
 	color: #54585a;
 }
@@ -258,4 +315,40 @@ article#node-1574.node-teaser header {
 }
 article#node-1574.node-teaser .content{
 	background-color: #4f4371;
+}
+
+ul.pager {
+	display: none;
+}
+
+#infscr-loading,
+div.scrollEmpty {
+	position: absolute;
+	display: block;
+	bottom: 120px;
+	text-align: center;
+	width: 100%;
+	font-family: "bebas-neue", "LeagueGothic", sans-serif;
+	font-size: 32px;
+	color: #fff;
+	text-shadow: 1px 2px 0px rgba(0,0,0,.3);
+}
+
+#infscr-loading img {
+	display: none;
+}
+
+#infscr-loading em {
+  display: block;
+  background: transparent url(../images/loading.gif) no-repeat center center;
+	text-indent: -9999px;
+	text-align: left;
+}
+
+#site-footer {
+	height: 40px;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	background: transparent url(../images/background.jpg) repeat 0 0;
 }
