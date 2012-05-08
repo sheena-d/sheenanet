@@ -10,7 +10,8 @@
 <!--[if lt IE 7]> <html class="no-js ie ieold" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie ie7" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie ie8" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js ie ienew" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>> <!--<![endif]-->
+<!--[if IE 9]>    <html class="no-js ie ie9" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>> <!--<![endif]-->
 <head profile="<?php print $grddl_profile; ?>">
 <?php print $head; ?>
 <title><?php print $head_title; ?></title>
